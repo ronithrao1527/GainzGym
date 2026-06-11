@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Send, CheckCircle2, AlertTriangle, PhoneCall, Mail, MapPin, Loader2 } from 'lucide-react';
+import { getApiHost } from '../utils/api';
 
 export default function InquiryForm({ prefilledSubject }) {
   const [formData, setFormData] = useState({
@@ -48,7 +49,7 @@ export default function InquiryForm({ prefilledSubject }) {
     }
 
     try {
-      const host = window.location.hostname === 'localhost' ? 'http://localhost:5001' : '';
+      const host = getApiHost();
       const response = await fetch(`${host}/api/inquiries`, {
         method: 'POST',
         headers: {

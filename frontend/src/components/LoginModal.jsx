@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { X, Lock, User, Loader2 } from 'lucide-react';
+import { getApiHost } from '../utils/api';
 
 export default function LoginModal({ onClose, onLoginSuccess }) {
   const [username, setUsername] = useState('');
@@ -19,7 +20,7 @@ export default function LoginModal({ onClose, onLoginSuccess }) {
     }
 
     try {
-      const host = window.location.hostname === 'localhost' ? 'http://localhost:5001' : '';
+      const host = getApiHost();
       const response = await fetch(`${host}/api/auth/login`, {
         method: 'POST',
         headers: {

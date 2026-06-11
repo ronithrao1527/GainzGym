@@ -5,6 +5,7 @@ import Equipment360Viewer from './components/Equipment360Viewer';
 import InquiryForm from './components/InquiryForm';
 import LoginModal from './components/LoginModal';
 import AdminDashboard from './components/AdminDashboard';
+import { getApiHost } from './utils/api';
 
 // 1. Local Fallback Datasets in INR (₹)
 const MOCK_PLANS = [
@@ -143,7 +144,7 @@ export default function App() {
   useEffect(() => {
     const fetchPlans = async () => {
       try {
-        const host = window.location.hostname === 'localhost' ? 'http://localhost:5001' : '';
+        const host = getApiHost();
         const res = await fetch(`${host}/api/plans`);
         if (res.ok) {
           setPlans(await res.json());
@@ -158,7 +159,7 @@ export default function App() {
 
     const fetchTrainers = async () => {
       try {
-        const host = window.location.hostname === 'localhost' ? 'http://localhost:5001' : '';
+        const host = getApiHost();
         const res = await fetch(`${host}/api/trainers`);
         if (res.ok) {
           setTrainers(await res.json());
@@ -173,7 +174,7 @@ export default function App() {
 
     const fetchEquipment = async () => {
       try {
-        const host = window.location.hostname === 'localhost' ? 'http://localhost:5001' : '';
+        const host = getApiHost();
         const res = await fetch(`${host}/api/equipment`);
         if (res.ok) {
           setEquipment(await res.json());

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Clock, MapPin, Award, Calendar, CheckCircle, Info, ChevronDown } from 'lucide-react';
+import { getApiHost } from '../utils/api';
 
 const CLASS_DETAILS = {
   'Strength Conditioning': {
@@ -79,7 +80,7 @@ export default function ScheduleBoard() {
 
   const fetchData = async () => {
     try {
-      const host = window.location.hostname === 'localhost' ? 'http://localhost:5001' : '';
+      const host = getApiHost();
       
       // Fetch schedules
       const response = await fetch(`${host}/api/schedules`);
@@ -166,7 +167,7 @@ export default function ScheduleBoard() {
 
   const getImageUrl = (path) => {
     if (!path) return '';
-    const host = window.location.hostname === 'localhost' ? 'http://localhost:5001' : '';
+    const host = getApiHost();
     return path.startsWith('http') ? path : `${host}${path}`;
   };
 

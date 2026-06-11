@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { X, Mail, DollarSign, UserPlus, PlusCircle, Trash, Check, AlertCircle, Loader2, Calendar, Edit3, Trash2 } from 'lucide-react';
+import { getApiHost } from '../utils/api';
 
 export default function AdminDashboard({ onClose, plans, onPlanUpdated, onTrainerAdded, onEquipmentAdded }) {
   const [activeTab, setActiveTab] = useState('inquiries');
@@ -48,7 +49,7 @@ export default function AdminDashboard({ onClose, plans, onPlanUpdated, onTraine
       const fetchInquiries = async () => {
         setInquiriesLoading(true);
         try {
-          const host = window.location.hostname === 'localhost' ? 'http://localhost:5001' : '';
+          const host = getApiHost();
           const token = localStorage.getItem('gainz_admin_token');
           const res = await fetch(`${host}/api/inquiries`, {
             headers: {
@@ -74,7 +75,7 @@ export default function AdminDashboard({ onClose, plans, onPlanUpdated, onTraine
       const fetchSchedulesAndTrainers = async () => {
         setSchedulesLoading(true);
         try {
-          const host = window.location.hostname === 'localhost' ? 'http://localhost:5001' : '';
+          const host = getApiHost();
           const token = localStorage.getItem('gainz_admin_token');
           
           // Fetch schedules
@@ -121,7 +122,7 @@ export default function AdminDashboard({ onClose, plans, onPlanUpdated, onTraine
     }
 
     try {
-      const host = window.location.hostname === 'localhost' ? 'http://localhost:5001' : '';
+      const host = getApiHost();
       const token = localStorage.getItem('gainz_admin_token');
       const res = await fetch(`${host}/api/plans/${planId}`, {
         method: 'PUT',
@@ -164,7 +165,7 @@ export default function AdminDashboard({ onClose, plans, onPlanUpdated, onTraine
     };
 
     try {
-      const host = window.location.hostname === 'localhost' ? 'http://localhost:5001' : '';
+      const host = getApiHost();
       const token = localStorage.getItem('gainz_admin_token');
       const res = await fetch(`${host}/api/trainers`, {
         method: 'POST',
@@ -233,7 +234,7 @@ export default function AdminDashboard({ onClose, plans, onPlanUpdated, onTraine
     };
 
     try {
-      const host = window.location.hostname === 'localhost' ? 'http://localhost:5001' : '';
+      const host = getApiHost();
       const token = localStorage.getItem('gainz_admin_token');
       const res = await fetch(`${host}/api/equipment`, {
         method: 'POST',
@@ -299,7 +300,7 @@ export default function AdminDashboard({ onClose, plans, onPlanUpdated, onTraine
       intensity
     };
 
-    const host = window.location.hostname === 'localhost' ? 'http://localhost:5001' : '';
+    const host = getApiHost();
     const token = localStorage.getItem('gainz_admin_token');
     const isEdit = id !== null;
 
@@ -408,7 +409,7 @@ export default function AdminDashboard({ onClose, plans, onPlanUpdated, onTraine
     if (!window.confirm('Are you sure you want to delete this schedule slot?')) return;
 
     try {
-      const host = window.location.hostname === 'localhost' ? 'http://localhost:5001' : '';
+      const host = getApiHost();
       const token = localStorage.getItem('gainz_admin_token');
       const res = await fetch(`${host}/api/schedules/${scheduleId}`, {
         method: 'DELETE',
