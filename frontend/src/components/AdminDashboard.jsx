@@ -979,7 +979,7 @@ export default function AdminDashboard({ onClose, plans, onPlanUpdated, onTraine
                                   className="btn-action-edit" 
                                   onClick={() => startEditSchedule(s)}
                                   title="Edit slot details"
-                                  style={{ background: 'rgba(229, 192, 96, 0.12)', border: 'none', color: 'var(--accent-gold)', padding: '6px', borderRadius: '6px', cursor: 'pointer', display: 'flex', alignItems: 'center' }}
+                                  style={{ background: 'rgba(var(--accent-gold-rgb), 0.12)', border: 'none', color: 'var(--accent-gold)', padding: '6px', borderRadius: '6px', cursor: 'pointer', display: 'flex', alignItems: 'center' }}
                                 >
                                   <Edit3 size={14} />
                                 </button>
@@ -1015,7 +1015,7 @@ export default function AdminDashboard({ onClose, plans, onPlanUpdated, onTraine
           left: 0;
           width: 100%;
           height: 100%;
-          background: rgba(6, 7, 10, 0.85);
+          background: rgba(255, 255, 255, 0.75);
           backdrop-filter: blur(15px);
           -webkit-backdrop-filter: blur(15px);
           display: flex;
@@ -1028,15 +1028,15 @@ export default function AdminDashboard({ onClose, plans, onPlanUpdated, onTraine
 
         .admin-container {
           position: relative;
-          background: var(--bg-secondary);
-          border: 1px solid rgba(255, 255, 255, 0.08);
+          background: #ffffff;
+          border: 1px solid var(--border-color);
           border-radius: 24px;
           width: 100%;
           max-width: 1100px;
           height: 85vh;
           max-height: 800px;
           overflow: hidden;
-          box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
           display: flex;
           flex-direction: column;
           padding: 30px;
@@ -1080,8 +1080,8 @@ export default function AdminDashboard({ onClose, plans, onPlanUpdated, onTraine
         }
 
         .sidebar-tab {
-          background: rgba(255, 255, 255, 0.02);
-          border: 1px solid rgba(255, 255, 255, 0.04);
+          background: var(--bg-secondary);
+          border: 1px solid var(--border-color);
           color: var(--text-secondary);
           padding: 14px 20px;
           border-radius: 12px;
@@ -1097,15 +1097,15 @@ export default function AdminDashboard({ onClose, plans, onPlanUpdated, onTraine
         }
 
         .sidebar-tab:hover {
-          background: rgba(255, 255, 255, 0.06);
+          background: var(--bg-tertiary);
           color: var(--text-primary);
         }
 
         .sidebar-tab.active {
-          background: rgba(var(--accent-cyan-rgb), 0.1);
+          background: rgba(var(--accent-cyan-rgb), 0.08);
           color: var(--accent-cyan);
           border-color: var(--accent-cyan);
-          box-shadow: var(--shadow-neon-cyan);
+          box-shadow: none;
         }
 
         /* Main Pane */
@@ -1158,19 +1158,19 @@ export default function AdminDashboard({ onClose, plans, onPlanUpdated, onTraine
         }
 
         .admin-table th {
-          background: rgba(255, 255, 255, 0.03);
+          background: var(--bg-secondary);
           padding: 12px 16px;
           color: var(--text-muted);
           text-transform: uppercase;
           font-size: 0.75rem;
           font-weight: 700;
           letter-spacing: 0.05em;
-          border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+          border-bottom: 1px solid var(--border-color);
         }
 
         .admin-table td {
           padding: 16px;
-          border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+          border-bottom: 1px solid var(--border-color);
           vertical-align: top;
         }
 
@@ -1189,7 +1189,7 @@ export default function AdminDashboard({ onClose, plans, onPlanUpdated, onTraine
 
         .msg-subject {
           font-weight: 600;
-          color: #fff;
+          color: var(--text-primary);
           margin-bottom: 4px;
         }
 
@@ -1210,8 +1210,8 @@ export default function AdminDashboard({ onClose, plans, onPlanUpdated, onTraine
           display: flex;
           justify-content: space-between;
           align-items: center;
-          background: rgba(255, 255, 255, 0.02);
-          border: 1px solid rgba(255, 255, 255, 0.05);
+          background: var(--bg-secondary);
+          border: 1px solid var(--border-color);
           padding: 16px 24px;
           border-radius: 12px;
         }
@@ -1236,12 +1236,12 @@ export default function AdminDashboard({ onClose, plans, onPlanUpdated, onTraine
           font-family: var(--font-display);
           font-size: 1.3rem;
           font-weight: bold;
-          color: var(--accent-lime);
+          color: var(--accent-gold);
         }
 
         .plan-input-action input {
-          background: var(--bg-tertiary);
-          border: 1px solid rgba(255, 255, 255, 0.08);
+          background: #ffffff;
+          border: 1px solid rgba(0, 0, 0, 0.12);
           color: var(--text-primary);
           padding: 8px 12px;
           border-radius: 6px;
@@ -1253,6 +1253,7 @@ export default function AdminDashboard({ onClose, plans, onPlanUpdated, onTraine
 
         .plan-input-action input:focus {
           border-color: var(--accent-cyan);
+          box-shadow: 0 0 0 3px rgba(var(--accent-cyan-rgb), 0.15);
         }
 
         /* Forms */
@@ -1285,8 +1286,8 @@ export default function AdminDashboard({ onClose, plans, onPlanUpdated, onTraine
         .form-field input,
         .form-field select,
         .form-field textarea {
-          background: var(--bg-tertiary);
-          border: 1px solid rgba(255, 255, 255, 0.08);
+          background: #ffffff;
+          border: 1px solid rgba(0, 0, 0, 0.12);
           color: var(--text-primary);
           padding: 12px;
           border-radius: 8px;
@@ -1299,11 +1300,11 @@ export default function AdminDashboard({ onClose, plans, onPlanUpdated, onTraine
         .form-field select:focus,
         .form-field textarea:focus {
           border-color: var(--accent-cyan);
-          box-shadow: 0 0 10px rgba(var(--accent-cyan-rgb), 0.15);
+          box-shadow: 0 0 0 3px rgba(var(--accent-cyan-rgb), 0.15);
         }
 
         .form-field select option {
-          background: var(--bg-secondary);
+          background: #ffffff;
           color: var(--text-primary);
         }
 
@@ -1319,7 +1320,7 @@ export default function AdminDashboard({ onClose, plans, onPlanUpdated, onTraine
           display: flex;
           align-items: center;
           gap: 8px;
-          box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+          box-shadow: 0 10px 20px rgba(0,0,0,0.1);
           z-index: 100;
           font-size: 0.85rem;
           animation: slideInRight 0.3s ease-out;

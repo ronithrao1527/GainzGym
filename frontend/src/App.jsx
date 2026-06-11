@@ -598,10 +598,10 @@ export default function App() {
           top: 0;
           left: 0;
           width: 100%;
-          background: transparent;
-          backdrop-filter: none;
-          -webkit-backdrop-filter: none;
-          border-bottom: none;
+          background: rgba(255, 255, 255, 0.85);
+          backdrop-filter: blur(12px);
+          -webkit-backdrop-filter: blur(12px);
+          border-bottom: 1px solid var(--border-color);
           z-index: 100;
           height: 80px;
           transition: var(--transition-smooth);
@@ -627,7 +627,6 @@ export default function App() {
           color: var(--accent-lime);
           width: 28px;
           height: 28px;
-          filter: drop-shadow(var(--shadow-neon-lime));
         }
 
         .logo-text {
@@ -635,7 +634,7 @@ export default function App() {
           font-weight: 800;
           font-size: 1.3rem;
           letter-spacing: 0.05em;
-          color: #fff;
+          color: var(--text-primary);
         }
 
         .logo-text span {
@@ -663,8 +662,8 @@ export default function App() {
         }
 
         .nav-portal-btn {
-          background: rgba(255, 255, 255, 0.04);
-          border: 1px solid rgba(255, 255, 255, 0.08);
+          background: var(--bg-secondary);
+          border: 1px solid var(--border-color);
           color: var(--text-primary);
           padding: 8px 16px;
           border-radius: 6px;
@@ -676,9 +675,9 @@ export default function App() {
         }
 
         .nav-portal-btn:hover {
-          background: rgba(255, 255, 255, 0.1);
-          color: var(--accent-cyan);
-          border-color: var(--accent-cyan);
+          background: var(--text-primary);
+          color: #ffffff;
+          border-color: var(--text-primary);
         }
 
         .nav-admin-btn {
@@ -770,7 +769,7 @@ export default function App() {
           left: 0;
           width: 100%;
           height: 100%;
-          background: linear-gradient(180deg, rgba(10, 11, 14, 0.7) 0%, rgba(10, 11, 14, 0.95) 100%);
+          background: linear-gradient(180deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.96) 100%);
           z-index: 1;
         }
 
@@ -785,7 +784,7 @@ export default function App() {
           display: inline-flex;
           align-items: center;
           gap: 8px;
-          background: rgba(var(--accent-gold-rgb), 0.1);
+          background: rgba(var(--accent-gold-rgb), 0.08);
           color: var(--accent-cyan);
           border: 1px solid rgba(var(--accent-gold-rgb), 0.2);
           padding: 6px 16px;
@@ -806,13 +805,13 @@ export default function App() {
           line-height: 1.05;
           text-transform: uppercase;
           margin-bottom: 24px;
+          color: #111111;
         }
 
         .hero-title span {
           background: var(--gradient-primary);
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
-          filter: drop-shadow(0 4px 12px rgba(182, 255, 0, 0.1));
         }
 
         .hero-desc {
@@ -832,10 +831,10 @@ export default function App() {
           bottom: 0;
           left: 0;
           width: 100%;
-          background: rgba(18, 20, 28, 0.7);
+          background: rgba(255, 255, 255, 0.8);
           backdrop-filter: blur(15px);
           -webkit-backdrop-filter: blur(15px);
-          border-top: 1px solid rgba(255, 255, 255, 0.05);
+          border-top: 1px solid rgba(0, 0, 0, 0.06);
           padding: 24px 0;
           z-index: 2;
         }
@@ -848,9 +847,7 @@ export default function App() {
 
         .highlight-item h3 {
           font-size: 2rem;
-          background: var(--gradient-primary);
-          -webkit-background-clip: text;
-          -webkit-text-fill-color: transparent;
+          color: var(--accent-gold);
         }
 
         .highlight-item span {
@@ -874,59 +871,60 @@ export default function App() {
           display: flex;
           flex-direction: column;
           padding: 48px 32px;
-          background: rgba(15, 15, 19, 0.75);
+          background: rgba(255, 255, 255, 0.8);
           overflow: hidden;
           border-radius: 20px;
-          border: 1px solid rgba(229, 192, 96, 0.12);
+          border: 1px solid rgba(0, 0, 0, 0.08);
         }
 
         .plan-basic {
-          border: 1px solid rgba(229, 192, 96, 0.15);
-          box-shadow: 0 5px 20px rgba(229, 192, 96, 0.02);
+          border: 1px solid rgba(0, 0, 0, 0.08);
+          box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
         }
         .plan-basic:hover {
           border-color: var(--accent-gold);
-          box-shadow: 0 10px 30px rgba(229, 192, 96, 0.15);
+          box-shadow: 0 12px 30px rgba(0, 0, 0, 0.05);
         }
 
         .plan-vip {
-          border: 1px solid rgba(229, 192, 96, 0.35);
-          background: linear-gradient(135deg, rgba(229, 192, 96, 0.12) 0%, rgba(15, 15, 19, 0.9) 100%);
-          box-shadow: 0 5px 25px rgba(229, 192, 96, 0.05);
+          border: 1px solid rgba(var(--accent-gold-rgb), 0.25);
+          background: linear-gradient(135deg, rgba(var(--accent-gold-rgb), 0.06) 0%, rgba(255, 255, 255, 0.95) 100%);
+          box-shadow: 0 4px 20px rgba(var(--accent-gold-rgb), 0.04);
         }
         .plan-vip:hover {
           border-color: var(--accent-gold-bright);
-          box-shadow: 0 10px 35px rgba(229, 192, 96, 0.25), var(--shadow-neon-cyan);
+          box-shadow: 0 12px 30px rgba(var(--accent-gold-rgb), 0.15);
         }
 
         .plan-elite {
-          border: 1px solid rgba(197, 155, 39, 0.45);
-          background: linear-gradient(135deg, rgba(197, 155, 39, 0.18) 0%, rgba(15, 15, 19, 0.9) 100%);
-          box-shadow: 0 5px 30px rgba(197, 155, 39, 0.05);
+          border: 1px solid rgba(var(--accent-lime-rgb), 0.35);
+          background: linear-gradient(135deg, rgba(var(--accent-lime-rgb), 0.08) 0%, rgba(255, 255, 255, 0.95) 100%);
+          box-shadow: 0 4px 20px rgba(var(--accent-lime-rgb), 0.04);
         }
         .plan-elite:hover {
           border-color: var(--accent-gold-bright);
-          box-shadow: 0 10px 40px rgba(197, 155, 39, 0.25), 0 0 20px rgba(229, 192, 96, 0.2);
+          box-shadow: 0 12px 30px rgba(var(--accent-lime-rgb), 0.15);
         }
 
         .btn-vip {
-          background: var(--gradient-primary);
-          color: #000;
-          box-shadow: var(--shadow-neon-cyan);
+          background: #111111;
+          color: #ffffff;
+          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
         }
         .btn-vip:hover {
-          background: #ffe359;
-          box-shadow: 0 0 25px rgba(229, 192, 96, 0.7);
+          background: #2b2b2b;
+          box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
           transform: translateY(-2px);
         }
 
         .btn-elite {
-          background: var(--gradient-orange);
-          color: #fff;
-          box-shadow: 0 0 15px rgba(197, 155, 39, 0.4);
+          background: var(--accent-gold);
+          color: #ffffff;
+          box-shadow: 0 4px 12px rgba(var(--accent-gold-rgb), 0.15);
         }
         .btn-elite:hover {
-          box-shadow: 0 0 25px rgba(197, 155, 39, 0.7);
+          background: var(--accent-gold-bright);
+          box-shadow: 0 6px 16px rgba(var(--accent-gold-rgb), 0.25);
           transform: translateY(-2px);
         }
 
@@ -943,7 +941,7 @@ export default function App() {
           top: 20px;
           right: -30px;
           background: var(--accent-cyan);
-          color: var(--bg-primary);
+          color: #ffffff;
           font-family: var(--font-display);
           font-weight: 700;
           font-size: 0.7rem;
@@ -1025,7 +1023,8 @@ export default function App() {
         .trainer-profile-card {
           padding: 0;
           overflow: hidden;
-          background: rgba(18, 20, 28, 0.4);
+          background: #ffffff;
+          border: 1px solid rgba(0, 0, 0, 0.06);
           border-radius: 20px;
         }
 
@@ -1100,16 +1099,17 @@ export default function App() {
         .equipment-catalog-card {
           padding: 0;
           overflow: hidden;
-          background: rgba(18, 20, 28, 0.4);
+          background: #ffffff;
           cursor: pointer;
           border-radius: 20px;
+          border: 1px solid rgba(0, 0, 0, 0.06);
         }
 
         .eq-card-image-box {
           position: relative;
           height: 280px;
-          background: #090a0d;
-          border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+          background: #f8f9fa;
+          border-bottom: 1px solid rgba(0, 0, 0, 0.06);
           overflow: hidden;
           display: flex;
           align-items: center;
@@ -1125,7 +1125,7 @@ export default function App() {
 
         .equipment-catalog-card:hover .eq-card-photo {
           transform: scale(1.05);
-          filter: drop-shadow(0 0 15px rgba(var(--accent-gold-rgb), 0.2));
+          filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.08));
         }
 
         .eq-360-hover-overlay {
@@ -1134,7 +1134,7 @@ export default function App() {
           left: 0;
           width: 100%;
           height: 100%;
-          background: rgba(10, 11, 14, 0.75);
+          background: rgba(255, 255, 255, 0.85);
           backdrop-filter: blur(4px);
           -webkit-backdrop-filter: blur(4px);
           display: flex;
@@ -1157,8 +1157,8 @@ export default function App() {
           border: 1px solid var(--accent-cyan);
           padding: 10px 20px;
           border-radius: 8px;
-          background: rgba(var(--accent-gold-rgb), 0.05);
-          box-shadow: var(--shadow-neon-cyan);
+          background: #ffffff;
+          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
           display: flex;
           align-items: center;
           gap: 8px;

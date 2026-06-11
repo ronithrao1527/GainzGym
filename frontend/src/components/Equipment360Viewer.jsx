@@ -518,7 +518,7 @@ export default function Equipment360Viewer({ equipment, onClose, onInquireClick 
           left: 0;
           width: 100%;
           height: 100%;
-          background: rgba(6, 7, 10, 0.85);
+          background: rgba(255, 255, 255, 0.7);
           backdrop-filter: blur(15px);
           -webkit-backdrop-filter: blur(15px);
           display: flex;
@@ -532,14 +532,14 @@ export default function Equipment360Viewer({ equipment, onClose, onInquireClick 
         .equipment-modal-container {
           position: relative;
           background: var(--bg-secondary);
-          border: 1px solid rgba(255, 255, 255, 0.08);
+          border: 1px solid rgba(0, 0, 0, 0.08);
           border-radius: 24px;
           width: 100%;
           max-width: 1100px;
           height: 85vh;
           max-height: 800px;
           overflow: hidden;
-          box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5), 0 0 30px rgba(229, 192, 96, 0.08);
+          box-shadow: 0 24px 64px rgba(0, 0, 0, 0.15);
           animation: slideUp 0.4s cubic-bezier(0.16, 1, 0.3, 1);
         }
 
@@ -547,8 +547,8 @@ export default function Equipment360Viewer({ equipment, onClose, onInquireClick 
           position: absolute;
           top: 20px;
           right: 20px;
-          background: rgba(255, 255, 255, 0.05);
-          border: 1px solid rgba(255, 255, 255, 0.08);
+          background: rgba(0, 0, 0, 0.05);
+          border: 1px solid rgba(0, 0, 0, 0.08);
           color: var(--text-primary);
           border-radius: 50%;
           width: 44px;
@@ -562,10 +562,9 @@ export default function Equipment360Viewer({ equipment, onClose, onInquireClick 
         }
 
         .close-btn:hover {
-          background: var(--accent-cyan);
-          color: var(--bg-primary);
-          border-color: var(--accent-cyan);
-          box-shadow: var(--shadow-neon-cyan);
+          background: #111111;
+          color: #ffffff;
+          border-color: #111111;
           transform: rotate(90deg);
         }
 
@@ -578,8 +577,8 @@ export default function Equipment360Viewer({ equipment, onClose, onInquireClick 
         /* Left side: Viewer */
         .viewer-pane {
           position: relative;
-          background: #090a0d;
-          border-right: 1px solid rgba(255, 255, 255, 0.06);
+          background: #f8f9fa;
+          border-right: 1px solid rgba(0, 0, 0, 0.08);
           display: flex;
           flex-direction: column;
           justify-content: space-between;
@@ -618,10 +617,10 @@ export default function Equipment360Viewer({ equipment, onClose, onInquireClick 
           font-size: 0.75rem;
           color: var(--accent-lime);
           font-weight: 600;
-          background: rgba(182, 255, 0, 0.08);
+          background: rgba(184, 144, 71, 0.08);
           padding: 4px 10px;
           border-radius: 6px;
-          border: 1px solid rgba(182, 255, 0, 0.15);
+          border: 1px solid rgba(184, 144, 71, 0.15);
         }
 
         .360-viewport {
@@ -644,12 +643,12 @@ export default function Equipment360Viewer({ equipment, onClose, onInquireClick 
           display: flex;
           align-items: center;
           gap: 8px;
-          background: rgba(0, 0, 0, 0.6);
+          background: rgba(255, 255, 255, 0.9);
           padding: 6px 14px;
           border-radius: 20px;
-          border: 1px solid rgba(255, 255, 255, 0.08);
+          border: 1px solid rgba(0, 0, 0, 0.08);
           font-size: 0.75rem;
-          color: var(--text-secondary);
+          color: var(--text-primary);
           pointer-events: none;
           opacity: 0.8;
           transition: var(--transition-smooth);
@@ -658,7 +657,7 @@ export default function Equipment360Viewer({ equipment, onClose, onInquireClick 
 
         .360-viewport:hover .drag-hint {
           opacity: 1;
-          border-color: rgba(229, 192, 96, 0.4);
+          border-color: rgba(184, 144, 71, 0.4);
         }
 
         @keyframes spinAround {
@@ -687,7 +686,7 @@ export default function Equipment360Viewer({ equipment, onClose, onInquireClick 
           position: absolute;
           opacity: 0;
           transition: opacity 0.15s ease-in-out;
-          filter: drop-shadow(0 10px 20px rgba(229, 192, 96, 0.25));
+          filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.08));
           user-select: none;
           pointer-events: none;
         }
@@ -720,14 +719,14 @@ export default function Equipment360Viewer({ equipment, onClose, onInquireClick 
           border-radius: 50%;
           background: var(--accent-cyan);
           border: 2px solid var(--bg-primary);
-          box-shadow: var(--shadow-neon-cyan);
+          box-shadow: none;
           cursor: pointer;
           transition: var(--transition-smooth);
         }
 
         .neon-range-slider::-webkit-slider-thumb:hover {
           background: var(--accent-lime);
-          box-shadow: var(--shadow-neon-lime);
+          box-shadow: none;
           transform: scale(1.2);
         }
 
@@ -739,8 +738,8 @@ export default function Equipment360Viewer({ equipment, onClose, onInquireClick 
 
         .angle-quick-clicks button {
           flex: 1;
-          background: rgba(255, 255, 255, 0.03);
-          border: 1px solid rgba(255, 255, 255, 0.05);
+          background: rgba(0, 0, 0, 0.03);
+          border: 1px solid rgba(0, 0, 0, 0.05);
           color: var(--text-secondary);
           padding: 6px;
           border-radius: 6px;
@@ -752,7 +751,7 @@ export default function Equipment360Viewer({ equipment, onClose, onInquireClick 
 
         .angle-quick-clicks button:hover,
         .angle-quick-clicks button.active {
-          background: rgba(229, 192, 96, 0.12);
+          background: rgba(184, 144, 71, 0.12);
           border-color: var(--accent-gold);
           color: var(--accent-gold);
         }
@@ -784,9 +783,7 @@ export default function Equipment360Viewer({ equipment, onClose, onInquireClick 
         .equipment-title {
           font-size: 2.2rem;
           text-transform: uppercase;
-          background: linear-gradient(135deg, #fff 30%, var(--text-secondary) 100%);
-          -webkit-background-clip: text;
-          -webkit-text-fill-color: transparent;
+          color: var(--text-primary);
         }
 
         .equipment-desc {
@@ -837,7 +834,7 @@ export default function Equipment360Viewer({ equipment, onClose, onInquireClick 
         }
 
         .specs-table tr {
-          border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+          border-bottom: 1px solid rgba(0, 0, 0, 0.06);
         }
 
         .specs-table tr:last-child {
@@ -871,8 +868,8 @@ export default function Equipment360Viewer({ equipment, onClose, onInquireClick 
         }
 
         .favorite-btn {
-          background: rgba(255, 255, 255, 0.03);
-          border: 1px solid rgba(255, 255, 255, 0.06);
+          background: rgba(0, 0, 0, 0.03);
+          border: 1px solid rgba(0, 0, 0, 0.06);
           color: var(--text-secondary);
           border-radius: 8px;
           width: 48px;
@@ -928,7 +925,7 @@ export default function Equipment360Viewer({ equipment, onClose, onInquireClick 
             height: 45vh;
             min-height: 320px;
             border-right: none;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.08);
           }
           .info-pane {
             padding: 24px;

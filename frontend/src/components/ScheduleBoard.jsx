@@ -471,10 +471,10 @@ export default function ScheduleBoard() {
           align-items: center;
           justify-content: center;
           gap: 16px;
-          border: 1px dashed rgba(229, 192, 96, 0.2);
-          background: rgba(255, 255, 255, 0.01);
+          border: 1px dashed rgba(184, 144, 71, 0.3);
+          background: #ffffff;
           border-radius: 16px;
-          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
         }
 
         .prompt-icon {
@@ -536,8 +536,8 @@ export default function ScheduleBoard() {
           justify-content: space-between;
           gap: 24px;
           margin-bottom: 40px;
-          background: rgba(255, 255, 255, 0.01);
-          border: 1px solid rgba(255, 255, 255, 0.05);
+          background: #ffffff;
+          border: 1px solid rgba(0, 0, 0, 0.08);
           border-radius: 16px;
           padding: 16px 24px;
         }
@@ -559,8 +559,8 @@ export default function ScheduleBoard() {
 
         .search-input {
           width: 100%;
-          background: rgba(255, 255, 255, 0.02);
-          border: 1px solid rgba(255, 255, 255, 0.08);
+          background: #ffffff;
+          border: 1px solid rgba(0, 0, 0, 0.12);
           border-radius: 10px;
           padding: 11px 14px 11px 40px;
           font-size: 0.9rem;
@@ -571,8 +571,8 @@ export default function ScheduleBoard() {
 
         .search-input:focus {
           border-color: var(--accent-gold);
-          box-shadow: 0 0 10px rgba(229, 192, 96, 0.1);
-          background: rgba(255, 255, 255, 0.04);
+          box-shadow: 0 0 0 3px rgba(184, 144, 71, 0.15);
+          background: #ffffff;
         }
 
         .clear-search-btn {
@@ -612,8 +612,8 @@ export default function ScheduleBoard() {
         }
 
         .dropdown-toggle-btn {
-          background: rgba(255, 255, 255, 0.02);
-          border: 1px solid rgba(255, 255, 255, 0.08);
+          background: #ffffff;
+          border: 1px solid rgba(0, 0, 0, 0.12);
           border-radius: 10px;
           padding: 11px 14px;
           font-size: 0.88rem;
@@ -628,16 +628,16 @@ export default function ScheduleBoard() {
         }
 
         .dropdown-toggle-btn:hover {
-          border-color: rgba(229, 192, 96, 0.35);
+          border-color: rgba(184, 144, 71, 0.35);
           color: var(--text-primary);
-          background: rgba(255, 255, 255, 0.04);
+          background: rgba(0, 0, 0, 0.02);
         }
 
         .dropdown-toggle-btn.active {
           border-color: var(--accent-gold);
           color: var(--accent-gold);
-          background: rgba(229, 192, 96, 0.05);
-          box-shadow: 0 0 10px rgba(229, 192, 96, 0.1);
+          background: rgba(184, 144, 71, 0.05);
+          box-shadow: none;
         }
 
         .chevron-indicator {
@@ -654,13 +654,13 @@ export default function ScheduleBoard() {
           left: 0;
           right: 0;
           z-index: 150;
-          background: rgba(11, 12, 16, 0.98);
+          background: #ffffff;
           backdrop-filter: blur(25px);
           -webkit-backdrop-filter: blur(25px);
-          border: 1px solid rgba(229, 192, 96, 0.2);
+          border: 1px solid rgba(0, 0, 0, 0.08);
           border-radius: 10px;
           padding: 6px;
-          box-shadow: 0 15px 30px rgba(0, 0, 0, 0.6);
+          box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
           display: flex;
           flex-direction: column;
           gap: 2px;
@@ -693,12 +693,12 @@ export default function ScheduleBoard() {
         }
 
         .dropdown-menu-item:hover {
-          background: rgba(229, 192, 96, 0.1);
+          background: rgba(var(--accent-gold-rgb), 0.1);
           color: var(--accent-gold);
         }
 
         .dropdown-menu-item.selected {
-          background: rgba(229, 192, 96, 0.15);
+          background: rgba(var(--accent-gold-rgb), 0.15);
           color: var(--accent-gold);
           font-weight: 600;
         }
@@ -757,7 +757,8 @@ export default function ScheduleBoard() {
         .day-tag-badge {
           font-size: 0.7rem;
           text-transform: uppercase;
-          background: rgba(255, 255, 255, 0.05);
+          background: var(--bg-secondary);
+          border: 1px solid var(--border-color);
           color: var(--text-secondary);
           padding: 2px 8px;
           border-radius: 4px;
@@ -837,7 +838,7 @@ export default function ScheduleBoard() {
 
         .btn-details {
           background: transparent;
-          border: 1px solid rgba(255, 255, 255, 0.12);
+          border: 1px solid var(--border-color);
           color: var(--text-secondary);
           padding: 8px 14px;
           border-radius: 8px;
@@ -852,16 +853,16 @@ export default function ScheduleBoard() {
         }
 
         .btn-details:hover {
-          background: rgba(255, 255, 255, 0.04);
-          border-color: rgba(229, 192, 96, 0.35);
+          background: var(--bg-secondary);
+          border-color: var(--accent-gold);
           color: var(--accent-gold);
         }
 
         .btn-details.active {
-          background: rgba(229, 192, 96, 0.1);
+          background: rgba(var(--accent-gold-rgb), 0.08);
           border-color: var(--accent-gold);
           color: var(--accent-gold);
-          box-shadow: 0 0 12px rgba(229, 192, 96, 0.1);
+          box-shadow: none;
         }
 
         .arrow-icon {
@@ -884,13 +885,13 @@ export default function ScheduleBoard() {
           left: 0;
           right: 0;
           z-index: 100;
-          background: rgba(11, 12, 16, 0.98);
+          background: #ffffff;
           backdrop-filter: blur(20px);
           -webkit-backdrop-filter: blur(20px);
-          border: 1px solid rgba(229, 192, 96, 0.22);
+          border: 1px solid var(--border-color);
           border-radius: 16px;
           padding: 24px;
-          box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7), 0 0 20px rgba(229, 192, 96, 0.05);
+          box-shadow: 0 20px 50px rgba(0, 0, 0, 0.06);
           display: grid;
           grid-template-columns: 1.15fr 0.85fr;
           gap: 24px;
@@ -917,7 +918,7 @@ export default function ScheduleBoard() {
         }
 
         .class-details-col {
-          border-right: 1px solid rgba(255, 255, 255, 0.08);
+          border-right: 1px solid var(--border-color);
           padding-right: 20px;
         }
 
@@ -968,7 +969,7 @@ export default function ScheduleBoard() {
           border-radius: 50%;
           object-fit: cover;
           border: 2px solid var(--accent-gold);
-          box-shadow: 0 0 10px rgba(229, 192, 96, 0.15);
+          box-shadow: none;
         }
 
         .trainer-avatar-info {
@@ -1008,8 +1009,8 @@ export default function ScheduleBoard() {
         .empty-schedule {
           text-align: center;
           padding: 40px;
-          background: rgba(255, 255, 255, 0.02);
-          border: 1px dashed rgba(255, 255, 255, 0.08);
+          background: var(--bg-secondary);
+          border: 1px dashed var(--border-color);
           border-radius: 12px;
           color: var(--text-secondary);
         }
@@ -1067,7 +1068,7 @@ export default function ScheduleBoard() {
           .class-details-col {
             border-right: none;
             padding-right: 0;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+            border-bottom: 1px solid var(--border-color);
             padding-bottom: 16px;
           }
         }

@@ -242,7 +242,7 @@ export default function InquiryForm({ prefilledSubject }) {
           display: flex;
           flex-direction: column;
           gap: 20px;
-          background: rgba(18, 20, 28, 0.4);
+          background: var(--bg-primary);
         }
 
         .info-title {
@@ -266,8 +266,8 @@ export default function InquiryForm({ prefilledSubject }) {
           display: flex;
           align-items: center;
           gap: 16px;
-          background: rgba(255, 255, 255, 0.02);
-          border: 1px solid rgba(255, 255, 255, 0.04);
+          background: var(--bg-secondary);
+          border: 1px solid var(--border-color);
           padding: 14px;
           border-radius: 10px;
         }
@@ -282,17 +282,17 @@ export default function InquiryForm({ prefilledSubject }) {
         }
 
         .info-icon.cyan-glow {
-          background: rgba(var(--accent-cyan-rgb), 0.1);
+          background: rgba(var(--accent-cyan-rgb), 0.08);
           color: var(--accent-cyan);
-          border: 1px solid rgba(var(--accent-cyan-rgb), 0.2);
-          box-shadow: 0 0 10px rgba(var(--accent-cyan-rgb), 0.1);
+          border: 1px solid rgba(var(--accent-cyan-rgb), 0.15);
+          box-shadow: none;
         }
 
         .info-icon.lime-glow {
-          background: rgba(var(--accent-lime-rgb), 0.1);
+          background: rgba(var(--accent-lime-rgb), 0.08);
           color: var(--accent-lime);
-          border: 1px solid rgba(var(--accent-lime-rgb), 0.2);
-          box-shadow: 0 0 10px rgba(var(--accent-lime-rgb), 0.1);
+          border: 1px solid rgba(var(--accent-lime-rgb), 0.15);
+          box-shadow: none;
         }
 
         .info-text {
@@ -316,10 +316,10 @@ export default function InquiryForm({ prefilledSubject }) {
 
         .hours-block {
           margin-top: auto;
-          background: rgba(0, 0, 0, 0.2);
+          background: var(--bg-secondary);
           padding: 16px;
           border-radius: 10px;
-          border: 1px solid rgba(255, 255, 255, 0.04);
+          border: 1px solid var(--border-color);
         }
 
         .hours-block h4 {
@@ -334,7 +334,7 @@ export default function InquiryForm({ prefilledSubject }) {
           justify-content: space-between;
           font-size: 0.85rem;
           padding: 6px 0;
-          border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+          border-bottom: 1px solid var(--border-color);
         }
 
         .hours-row:last-child {
@@ -408,8 +408,8 @@ export default function InquiryForm({ prefilledSubject }) {
 
         .input-field input,
         .input-field textarea {
-          background: var(--bg-tertiary);
-          border: 1px solid rgba(255, 255, 255, 0.08);
+          background: #ffffff;
+          border: 1px solid rgba(0, 0, 0, 0.12);
           color: var(--text-primary);
           padding: 12px 16px;
           border-radius: 8px;
@@ -422,8 +422,8 @@ export default function InquiryForm({ prefilledSubject }) {
         .input-field input:focus,
         .input-field textarea:focus {
           border-color: var(--accent-cyan);
-          box-shadow: 0 0 10px rgba(var(--accent-cyan-rgb), 0.2);
-          background: rgba(var(--accent-cyan-rgb), 0.02);
+          box-shadow: 0 0 0 3px rgba(var(--accent-cyan-rgb), 0.15);
+          background: #ffffff;
         }
 
         .input-field textarea {

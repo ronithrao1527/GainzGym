@@ -110,7 +110,7 @@ export default function LoginModal({ onClose, onLoginSuccess }) {
           left: 0;
           width: 100%;
           height: 100%;
-          background: rgba(6, 7, 10, 0.85);
+          background: rgba(255, 255, 255, 0.75);
           backdrop-filter: blur(12px);
           -webkit-backdrop-filter: blur(12px);
           display: flex;
@@ -126,7 +126,26 @@ export default function LoginModal({ onClose, onLoginSuccess }) {
           max-width: 440px;
           position: relative;
           padding: 40px !important;
+          background: #ffffff;
+          border: 1px solid var(--border-color);
+          box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
           animation: slideUp 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .close-btn {
+          position: absolute;
+          top: 20px;
+          right: 20px;
+          background: transparent;
+          border: none;
+          color: var(--text-secondary);
+          cursor: pointer;
+          transition: var(--transition-smooth);
+        }
+
+        .close-btn:hover {
+          color: var(--text-primary);
+          transform: scale(1.1);
         }
 
         .login-header {
@@ -138,14 +157,14 @@ export default function LoginModal({ onClose, onLoginSuccess }) {
           width: 50px;
           height: 50px;
           border-radius: 50%;
-          background: rgba(var(--accent-cyan-rgb), 0.1);
+          background: rgba(var(--accent-cyan-rgb), 0.08);
           color: var(--accent-cyan);
-          border: 1px solid rgba(var(--accent-cyan-rgb), 0.2);
+          border: 1px solid rgba(var(--accent-cyan-rgb), 0.15);
           display: flex;
           align-items: center;
           justify-content: center;
           margin: 0 auto 16px auto;
-          box-shadow: var(--shadow-neon-cyan);
+          box-shadow: none;
         }
 
         .login-header h3 {
@@ -211,8 +230,8 @@ export default function LoginModal({ onClose, onLoginSuccess }) {
 
         .input-wrapper input {
           width: 100%;
-          background: var(--bg-tertiary);
-          border: 1px solid rgba(255, 255, 255, 0.08);
+          background: #ffffff;
+          border: 1px solid rgba(0, 0, 0, 0.12);
           color: var(--text-primary);
           padding: 12px 16px 12px 42px;
           border-radius: 8px;
@@ -223,7 +242,7 @@ export default function LoginModal({ onClose, onLoginSuccess }) {
 
         .input-wrapper input:focus {
           border-color: var(--accent-cyan);
-          box-shadow: 0 0 10px rgba(var(--accent-cyan-rgb), 0.15);
+          box-shadow: 0 0 0 3px rgba(var(--accent-cyan-rgb), 0.15);
         }
 
         .login-btn {
