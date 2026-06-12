@@ -20,6 +20,11 @@ export const getApiHost = () => {
     return `${protocol}//${hostname}:5001`;
   }
 
+  // If a production API URL is supplied via Vite environment variables (for decoupled Render + Vercel deploy)
+  if (import.meta.env.VITE_API_URL) {
+    return import.meta.env.VITE_API_URL;
+  }
+
   // In production (Vercel deployment), endpoints are relative and served from the same domain
   return '';
 };
