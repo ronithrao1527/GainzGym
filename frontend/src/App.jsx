@@ -599,10 +599,10 @@ export default function App() {
           top: 0;
           left: 0;
           width: 100%;
-          background: rgba(255, 255, 255, 0.85);
+          background: #111111;
           backdrop-filter: blur(12px);
           -webkit-backdrop-filter: blur(12px);
-          border-bottom: 1px solid var(--border-color);
+          border-bottom: 1px solid rgba(255, 255, 255, 0.08);
           z-index: 100;
           height: 80px;
           transition: var(--transition-smooth);
@@ -635,7 +635,7 @@ export default function App() {
           font-weight: 800;
           font-size: 1.3rem;
           letter-spacing: 0.05em;
-          color: var(--text-primary);
+          color: #ffffff;
         }
 
         .logo-text span {
@@ -654,7 +654,7 @@ export default function App() {
           font-size: 0.9rem;
           text-transform: uppercase;
           letter-spacing: 0.04em;
-          color: var(--text-secondary);
+          color: rgba(255, 255, 255, 0.75);
           transition: var(--transition-smooth);
         }
 
@@ -663,9 +663,9 @@ export default function App() {
         }
 
         .nav-portal-btn {
-          background: var(--bg-secondary);
-          border: 1px solid var(--border-color);
-          color: var(--text-primary);
+          background: transparent;
+          border: 1px solid rgba(255, 255, 255, 0.2);
+          color: #ffffff;
           padding: 8px 16px;
           border-radius: 6px;
           font-family: var(--font-display);
@@ -676,9 +676,9 @@ export default function App() {
         }
 
         .nav-portal-btn:hover {
-          background: var(--text-primary);
-          color: #ffffff;
-          border-color: var(--text-primary);
+          background: #ffffff;
+          color: #111111;
+          border-color: #ffffff;
         }
 
         .nav-admin-btn {
@@ -1280,9 +1280,10 @@ export default function App() {
 
         /* Footer */
         .titan-footer {
-          background: #06070a;
-          border-top: 1px solid rgba(255, 255, 255, 0.05);
+          background: #111111;
+          border-top: 1px solid rgba(255, 255, 255, 0.08);
           padding: 80px 0 30px 0;
+          color: rgba(255, 255, 255, 0.7);
         }
 
         .footer-grid {
@@ -1292,16 +1293,21 @@ export default function App() {
           margin-bottom: 60px;
         }
 
+        .footer-brand .logo-text {
+          color: #ffffff;
+        }
+
         .footer-brand p {
           margin-top: 20px;
           font-size: 0.9rem;
           max-width: 380px;
+          color: rgba(255, 255, 255, 0.55);
         }
 
         .footer-links h4,
         .footer-contact h4 {
           font-size: 0.85rem;
-          color: var(--text-muted);
+          color: #ffffff;
           letter-spacing: 0.05em;
           margin-bottom: 24px;
         }
@@ -1314,7 +1320,7 @@ export default function App() {
 
         .footer-links a {
           font-size: 0.9rem;
-          color: var(--text-secondary);
+          color: rgba(255, 255, 255, 0.6);
           transition: var(--transition-smooth);
           width: fit-content;
         }
@@ -1336,15 +1342,15 @@ export default function App() {
           align-items: center;
           gap: 10px;
           font-size: 0.9rem;
-          color: var(--text-secondary);
+          color: rgba(255, 255, 255, 0.6);
         }
 
         .footer-bottom {
-          border-top: 1px solid rgba(255, 255, 255, 0.03);
+          border-top: 1px solid rgba(255, 255, 255, 0.05);
           padding-top: 30px;
           text-align: center;
           font-size: 0.8rem;
-          color: var(--text-muted);
+          color: rgba(255, 255, 255, 0.4);
         }
 
         /* Animations */
@@ -1414,12 +1420,13 @@ export default function App() {
             top: 80px;
             left: 0;
             width: 100%;
-            background: var(--bg-secondary);
-            border-bottom: 1px solid rgba(255,255,255,0.06);
+            background: #111111;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
             flex-direction: column;
             gap: 0;
             padding: 16px 0;
             display: none;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
           }
           .nav-bar.open {
             display: flex;
@@ -1427,7 +1434,7 @@ export default function App() {
           .nav-bar a {
             width: 100%;
             padding: 14px 24px;
-            border-bottom: 1px solid rgba(255,255,255,0.03);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
             font-size: 0.9rem;
           }
           .nav-bar a:last-child {
